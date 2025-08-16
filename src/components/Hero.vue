@@ -22,7 +22,7 @@ import { Github, Linkedin, Facebook, Instagram, Send } from "lucide-vue-next";
       </h1>
 
       <p class="text-xl md:text-2xl text-text-secondary mb-8 font-mono">
-        &lt; Software Engineering /&gt;
+        &lt; Software Engineering / &gt;
       </p>
 
       <p class="max-w-3xl mx-auto text-text-secondary mb-10">
@@ -46,23 +46,23 @@ import { Github, Linkedin, Facebook, Instagram, Send } from "lucide-vue-next";
 
       <div class="flex justify-center space-x-6 mt-12">
         <a
-          href="#"
-          class="text-text-secondary hover:text-accent transition-colors"
+          href="https://github.com/Ipanha" target="_blank"
+          class="hover:text-accent transition-colors"
           ><Github size="24"
         /></a>
         <a
-          href="#"
-          class="text-text-secondary hover:text-accent transition-colors"
+          href="https://www.linkedin.com/in/chet-panha-2ba80730a/" target="_blank"
+          class="hover:text-accent transition-colors"
           ><Linkedin size="24"
         /></a>
         <a
-          href="#"
-          class="text-text-secondary hover:text-accent transition-colors"
+          href="https://www.facebook.com/ak.mp.7587" 
+          class="hover:text-accent transition-colors"
           ><Facebook size="24"
         /></a>
         <a
-          href="#"
-          class="text-text-secondary hover:text-accent transition-colors"
+          href="https://www.instagram.com/iamzanha/" target="_blank"
+          class="hover:text-accent transition-colors"
           ><Instagram size="24"
         /></a>
       </div>

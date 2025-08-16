@@ -7,6 +7,7 @@ const isMenuOpen = ref(false);
 const navLinks = [
   { href: '#home', text: 'Home' },
   { href: '#about', text: 'About' },
+  { href: '#journey', text: 'Journey' },
   { href: '#skills', text: 'Skills' },
   { href: '#projects', text: 'Projects' },
   { href: '#contact', text: 'Contact' },
