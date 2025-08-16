@@ -47,7 +47,7 @@ const acheivement = [
 </script>
 <template>
   <section :id="id" class="section-container">
-    <div class="text-center mb-16">
+    <div class="text-center mb-12 md:mb-16">
       <h2 class="section-title">
         My <span class="accent-text">Achievement</span>
       </h2>
@@ -61,11 +61,12 @@ const acheivement = [
         class="animate-fade-in-up"
       >
         <h3
-          class="text-xl font-bold text-text-secondary mb-6 text-center md:text-left"
+          class="text-xl sm:text-2xl font-bold text-text-secondary mb-6 text-center md:text-left"
         >
           {{ category.title }}
         </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Grid now stacks on mobile, 2 cols on tablet, 3 on desktop -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
             v-for="achieve in category.achieves"
             :key="achieve.name"
@@ -81,8 +82,10 @@ const acheivement = [
                 class="w-full h-full object-contain"
               />
             </div>
-            <div class="p-6 text-center">
-              <h4 class="text-lg font-semibold mb-3">{{ achieve.name }}</h4>
+            <!-- Added min-height to keep card sizes consistent -->
+            <div class="p-6 text-center flex flex-col min-h-[150px]">
+              <!-- Responsive font size for the achievement name -->
+              <h4 class="text-base sm:text-lg font-semibold mb-3 flex-grow">{{ achieve.name }}</h4>
               <hr class="border-gray-700/50" />
               <span class="text-sm text-text-secondary mt-3 block">{{
                 achieve.company
@@ -94,22 +97,24 @@ const acheivement = [
     </div>
   </section>
 
+  <!-- Image Modal -->
   <Transition name="fade">
     <div
       v-if="selectedImage"
       @click="closeImageModal"
       class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
     >
-      <div class="relative max-w-4xl max-h-[90vh]">
+      <!-- Added @click.stop to prevent modal from closing when clicking the image -->
+      <div class="relative max-w-4xl max-h-[90vh]" @click.stop>
         <img
           :src="selectedImage"
           alt="Full screen certificate view"
-          class="object-contain w-full h-full"
-          @click.stop
+          class="object-contain w-full h-full rounded-lg"
         />
+        <!-- Made the close button more responsive and accessible -->
         <button
           @click="closeImageModal"
-          class="absolute -top-4 -right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg"
+          class="absolute -top-3 -right-3 sm:top-0 sm:-right-12 bg-white/80 backdrop-blur-sm text-black rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg hover:bg-white transition-colors"
           aria-label="Close image"
         >
           &times;

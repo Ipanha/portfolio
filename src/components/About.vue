@@ -2,6 +2,7 @@
 import { computed } from "vue";
 import { Award, Briefcase, Code } from "lucide-vue-next";
 
+// Your script content remains the same
 const developerInfo = {
   name: "Chet Panha",
   age: 20,
@@ -35,31 +36,33 @@ const skillsString = computed(() =>
     <div
       class="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 md:gap-16 items-start"
     >
-    <div class="animate-fade-in-up space-y-8">
-        <p class="text-lg text-text-secondary leading-relaxed">
+      <div class="animate-fade-in-up space-y-8">
+        <p class="text-base md:text-lg text-text-secondary leading-relaxed">
           {{ developerInfo.bio }}
         </p>
 
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-3 gap-2 sm:gap-4">
           <div
             v-for="stat in developerInfo.stats"
             :key="stat.label"
-            class="bg-primary text-center p-4 rounded-lg"
+            class="bg-primary text-center p-3 sm:p-4 rounded-lg"
           >
             <component
               :is="stat.icon"
               class="mx-auto text-accent mb-2"
               :size="28"
             />
-            <div class="text-xl font-bold">{{ stat.value }}</div>
-            <div class="text-sm text-text-secondary">{{ stat.label }}</div>
+            <div class="text-lg sm:text-xl font-bold">{{ stat.value }}</div>
+            <div class="text-xs sm:text-sm text-text-secondary">
+              {{ stat.label }}
+            </div>
           </div>
         </div>
 
         <div
-          class="bg-primary rounded-lg p-6 font-mono text-sm text-gray-300 shadow-lg"
+          class="bg-primary rounded-lg p-4 sm:p-6 font-mono shadow-lg"
         >
-          <pre><code class="language-javascript">
+          <pre><code class="language-javascript text-xs sm:text-sm whitespace-pre-wrap">
         <span class="text-gray-500">// {{ developerInfo.name.toLowerCase().replace(' ', '-') }}.js</span>
         <span class="text-purple-400">class</span> <span class="text-green-300">Developer</span> {
           <span class="text-yellow-300">constructor</span>() {
@@ -86,7 +89,6 @@ const skillsString = computed(() =>
           alt="Chet Panha"
           class="relative rounded-xl shadow-2xl w-full h-auto object-cover"
         />
-        
       </div>
     </div>
   </section>
