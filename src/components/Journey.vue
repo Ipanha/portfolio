@@ -49,7 +49,7 @@ const journey = [
     icon: Briefcase,
     items: [
         {
-        period: "2025-05-17 - Now",
+        period: "2025-05-17 - Present",
         name: "Customer Upselling",
         place: "CheckinMe",
       },
@@ -93,7 +93,7 @@ const journey = [
         class="relative pl-4 border-l-2 border-secondary space-y-8"
         >
         <!-- Circle -->
-        <div class="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-secondary rounded-full border-4 border-primary"></div>
+        <div class="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full border-4 border-primary"></div>
 
         <!-- Content with proper left margin -->
         <div class="ml-10">

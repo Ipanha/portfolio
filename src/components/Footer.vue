@@ -1,5 +1,5 @@
 <script setup>
-import { Github, Linkedin, Facebook, Instagram } from "lucide-vue-next";
+import { Github, Linkedin, Facebook, Instagram, Youtube } from "lucide-vue-next";
 </script>
 
 <template>
@@ -9,29 +9,47 @@ import { Github, Linkedin, Facebook, Instagram } from "lucide-vue-next";
     >
       <div class="flex justify-center space-x-6 mb-4">
         <a
-          href="https://github.com/Ipanha"
+          href="https://www.youtube.com/@Chet_Panha"
           target="_blank"
           class="hover:text-accent transition-colors"
-          ><Github size="24"
-        /></a>
+        >
+          <Youtube class="w-6 h-6" />
+        </a>
         <a
-          href="https://www.linkedin.com/in/chet-panha-2ba80730a/"
+          href="https://www.tiktok.com/@chet_panha"
           target="_blank"
           class="hover:text-accent transition-colors"
-          ><Linkedin size="24"
-        /></a>
+        >
+          <i class="bi bi-tiktok text-gray-400 hover:text-blue-500 text-xl"></i>
+        </a>
         <a
-          href="https://www.facebook.com/ak.mp.7587"
+          href="https://www.facebook.com/profile.php?id=100088538084724"
           target="_blank"
           class="hover:text-accent transition-colors"
-          ><Facebook size="24"
-        /></a>
+        >
+          <Facebook class="w-6 h-6" />
+        </a>
         <a
           href="https://www.instagram.com/iamzanha/"
           target="_blank"
           class="hover:text-accent transition-colors"
-          ><Instagram size="24"
-        /></a>
+        >
+          <Instagram class="w-6 h-6" />
+        </a>
+        <a
+          href="https://github.com/Ipanha"
+          target="_blank"
+          class="hover:text-accent transition-colors"
+        >
+          <Github class="w-6 h-6" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/chet-panha-2ba80730a/"
+          target="_blank"
+          class="hover:text-accent transition-colors"
+        >
+          <Linkedin class="w-6 h-6" />
+        </a>
       </div>
       <p>
         &copy; {{ new Date().getFullYear() }} Chet Panha. All Rights Reserved.

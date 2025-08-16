@@ -6,12 +6,12 @@ const projects = [
   {
     title: "Portfolio",
     description:
-      "We are a passionate team dedicated to providing top-tier digital products and services that empower businesses and individuals to succeed in the online world.",
+      "A personal portfolio website showcasing my skills, projects, and experience as a software developer.",
     image: "/products/portfolio.png",
     tags: ["Vue Js", "JavaScript", "Tailwind CSS"],
     categories: ["Vue Js", "Tailwind CSS"],
-    liveUrl: "https://development-sambokdigital.sevalla.app/",
-    codeUrl: "https://github.com/Ipanha/ecommerce",
+    liveUrl: "https://chet-panha-portfolio.vercel.app/",
+    codeUrl: "https://github.com/Ipanha/portfolio",
   },
   {
     title: "Sambok Digital",

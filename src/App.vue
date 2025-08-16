@@ -7,6 +7,7 @@ import Skills from "./components/Skills.vue";
 import Projects from "./components/Projects.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
+import Achieve from "./components/Achieve.vue";
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import Footer from "./components/Footer.vue";
       <Hero id="home" />
       <About id="about" />
       <Journey id="journey" />
+      <Achieve id="achievement" />
       <Skills id="skills" />
       <Projects id="projects" />
       <Contact id="contact" />
