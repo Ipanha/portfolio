@@ -14,55 +14,35 @@ const handleSubmit = async () => {
   isSending.value = true;
   statusMessage.value = "";
 
-  // --- IMPORTANT: Replace with your actual Bot Token and Chat ID ---
-  const botToken = "8037577082:AAFAnxOOcZVQ5dyLJIopbTK_iW0R7q1cgk4";
-  const chatId = "1316755847";
-
-  if (
-    botToken === "YOUR_TELEGRAM_BOT_TOKEN" ||
-    chatId === "YOUR_TELEGRAM_CHAT_ID"
-  ) {
-    statusMessage.value =
-      "Error: Please configure your Bot Token and Chat ID in the code.";
-    isSending.value = false;
-    return;
-  }
-
-  // Format the message to be sent to Telegram
-  const formattedMessage = `
-📬 *New Contact Form Submission*
-
-*Name:* ${name.value}
-*Email:* ${email.value}
-*Message:*
-${message.value}
-  `;
-
-  const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+  // The frontend no longer knows about the secret tokens.
+  // It just sends the form data to our own secure backend endpoint.
+  const apiEndpoint = "/api/sendMessage";
 
   try {
-    const response = await fetch(url, {
+    const response = await fetch(apiEndpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
+      // We only send the public form data, not the secrets.
       body: JSON.stringify({
-        chat_id: chatId,
-        text: formattedMessage,
-        parse_mode: "Markdown", // Allows for bold, italics, etc.
+        name: name.value,
+        email: email.value,
+        message: message.value,
       }),
     });
 
     const result = await response.json();
 
-    if (result.ok) {
+    if (response.ok) {
       statusMessage.value = "✅ Message sent successfully!";
       // Clear the form
       name.value = "";
       email.value = "";
       message.value = "";
     } else {
-      throw new Error(result.description);
+      // Use the error message from our backend
+      throw new Error(result.error || "Something went wrong");
     }
   } catch (error) {
     console.error("Failed to send message:", error);
@@ -75,14 +55,13 @@ ${message.value}
 
 <template>
   <section class="section-container">
-    <div class="text-center mb-12 md:mb-16">
+    <div class="text-center mb-12 md-mb-16">
       <h2 class="section-title">
         Get In <span class="accent-text">Touch</span>
       </h2>
       <p class="section-subtitle">Let's build something amazing together.</p>
     </div>
 
-    <!-- The grid layout is already responsive, stacking on mobile -->
     <div class="grid lg:grid-cols-2 gap-12">
       <!-- Contact Info Column -->
       <div class="animate-fade-in-up">
@@ -121,7 +100,6 @@ ${message.value}
 
       <!-- Form Column -->
       <div class="animate-fade-in-up" style="animation-delay: 0.2s">
-        <!-- Changed form to handle submission with Vue -->
         <form @submit.prevent="handleSubmit" class="space-y-6">
           <input
             v-model="name"
@@ -150,10 +128,8 @@ ${message.value}
             class="w-full bg-accent text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-indigo-500 transition-colors flex items-center justify-center gap-2 disabled:bg-gray-500 disabled:cursor-not-allowed"
           >
             <Send size="20" />
-            <!-- Show different text based on sending state -->
             {{ isSending ? "Sending..." : "Send Message" }}
           </button>
-          <!-- Display status message after submission -->
           <p
             v-if="statusMessage"
             class="text-center text-sm mt-4"
