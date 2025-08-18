@@ -28,6 +28,11 @@ const journey = [
     icon: Award,
     items: [
       {
+        period: "2024",
+        name: "From Zero to Hero",
+        place: "RUPP",
+      },
+      {
         period: "2023",
         name: "Personality Development & Society",
         place: "RUPP",

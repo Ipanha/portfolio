@@ -17,7 +17,7 @@ const acheivement = [
     title: "Certifications",
     achieves: [
       {
-        name: "Best Performance of August 2024",
+        name: "Best Performance of 1st Quarter 2024",
         company: "CheckinMe",
         image: "/certificate/bestPerformanceOfTraining.jpg",
       },
