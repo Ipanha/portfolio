@@ -30,7 +30,7 @@ const journey = [
       {
         period: "2024",
         name: "From Zero to Hero",
-        place: "RUPP",
+        place: "CheckinMe",
       },
       {
         period: "2023",

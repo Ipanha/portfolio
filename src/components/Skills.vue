@@ -115,6 +115,30 @@ const skillCategories = [
         image: "/icon/oop.png",
       },
       {
+        name: "Zoho Sprints",
+        level: "90%",
+        color: "from-green-500 to-slate-200",
+        image: "/icon/zoho.png",
+      },
+      {
+        name: "Click Up",
+        level: "95%",
+        color: "from-blue-500 to-pink-500",
+        image: "/icon/clickup.png",
+      },
+      {
+        name: "ChatGPT",
+        level: "95%",
+        color: "from-slate-300 to-green-500",
+        image: "/icon/gpt.png",
+      },
+      {
+        name: "Google Gemini",
+        level: "95%",
+        color: "from-pink-500 to-blue-500",
+        image: "/icon/gemini.png",
+      },
+      {
         name: "Microsoft Office",
         level: "84%",
         color: "from-orange-600 to-red-500",
