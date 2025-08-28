@@ -21,7 +21,7 @@ import {
       class="relative z-10 text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up"
     >
       <img
-        src="https://scontent.fpnh11-1.fna.fbcdn.net/v/t39.30808-6/522158588_1260024372279400_4989692203862965515_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHjguCZXRTR1zU6rNfn2eVPt74uhcTdLmy3vi6FxN0ubOw5URBBlQnd4ima67tdcgker_rwnlWzX6tVCUiGPNZ4&_nc_ohc=x9c89zBSPtMQ7kNvwHDU32q&_nc_oc=AdkcjFE-WEDGZSGqs4Sj1qiAApkGg4Oo-tsgsOpmQdnwi2EOPjxC64nNb2hCXwYg1Vw&_nc_zt=23&_nc_ht=scontent.fpnh11-1.fna&_nc_gid=ehNyyj_2F4IK1H-VPjgOEw&oh=00_AfXCfud1W74wkylnOkHipJ7jUEyN7pvYI3nWz18CeNpfOg&oe=68A471DE"
+        src="/public/images/profile.jpg"
         alt="Chet Panha"
         class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-4 md:mb-6 border-4 border-secondary shadow-lg animate-subtle-glow"
       />
