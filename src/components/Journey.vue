@@ -7,20 +7,20 @@ const journey = [
     icon: School,
     items: [
       {
-        period: "2023 - Present",
-        name: "Computer Science",
-        place: "Royal University of Phnom Penh (RUPP)",
-      },
-      {
-        period: "2020 - 2022",
-        name: "High School Diploma",
-        place: "Chambak High School",
-      },
-      {
-        period: "2017 - 2019",
-        name: "Secondary School",
-        place: "Boeung Rey Secondary School",
-      },
+      period: "2023 - Present",
+      name: "Bachelor of Computer Science",
+      place: "Royal University of Phnom Penh (RUPP)"
+    },
+    {
+      period: "2020 - 2022",
+      name: "High School Baccalaureate",
+      place: "Chambak High School"
+    },
+    {
+      period: "2017 - 2019",
+      name: "Secondary School Diploma",
+      place: "Boeung Rey Secondary School"
+    }
     ],
   },
   {
@@ -60,8 +60,8 @@ const journey = [
       },
         {
         period: "2024-05-13 - 2025-05-16",
-        name: "System Trainer",
-        place: "CheckinMe",
+        name: "System Trainer (Trained 292 clients)",
+        place: "CheckinMe"
       },
       {
         period: "2023 - 2024",

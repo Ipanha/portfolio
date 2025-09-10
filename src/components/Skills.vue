@@ -16,6 +16,12 @@ const skillCategories = [
         image: "/icon/java.png",
       },
       {
+        name: "Dart",
+        level: "85%",
+        color: "from-blue-800 to-blue-300",
+        image: "/icon/dart.png",
+      },
+      {
         name: "PHP",
         level: "80%",
         color: "from-indigo-400 to-purple-500",
@@ -65,41 +71,6 @@ const skillCategories = [
     ],
   },
   {
-    title: "Design & Editing",
-    skills: [
-      {
-        name: "Adobe Photoshop",
-        level: "90%",
-        color: "from-blue-600 to-sky-400",
-        image: "/icon/photoshop.png",
-      },
-      {
-        name: "Adobe XD",
-        level: "85%",
-        color: "from-pink-500 to-rose-400",
-        image: "/icon/xd.png",
-      },
-      {
-        name: "Adobe Premiere Pro",
-        level: "85%",
-        color: "from-indigo-500 to-purple-400",
-        image: "/icon/premier.png",
-      },
-      {
-        name: "CapCut",
-        level: "98%",
-        color: "from-gray-600 to-slate-400",
-        image: "/icon/capcut.png",
-      },
-      {
-        name: "Canva",
-        level: "98%",
-        color: "from-blue-600 to-blue-300",
-        image: "/icon/canva.png",
-      },
-    ],
-  },
-  {
     title: "Tools & Professional Skills",
     skills: [
       {
@@ -113,6 +84,30 @@ const skillCategories = [
         level: "85%",
         color: "from-rose-500 to-pink-500",
         image: "/icon/oop.png",
+      },
+      {
+        name: "Docker",
+        level: "80%",
+        color: "from-blue-500 to-emerald-500",
+        image: "/icon/docker.png",
+      },
+      {
+        name: "Postman",
+        level: "90%",
+        color: "from-orange-700 to-amber-500",
+        image: "/icon/postman.svg",
+      },
+      {
+        name: "SQL",
+        level: "90%",
+        color: "from-blue-700 to-slate-200",
+        image: "/icon/sql.png",
+      },
+      {
+        name: "Table Plus",
+        level: "90%",
+        color: "from-amber-700 to-slate-200",
+        image: "/icon/tableplus.webp",
       },
       {
         name: "Zoho Sprints",
@@ -149,6 +144,41 @@ const skillCategories = [
         level: "90%",
         color: "from-emerald-500 to-green-400",
         image: "/icon/problem-solving.png",
+      },
+    ],
+  },
+  {
+    title: "Design & Editing",
+    skills: [
+      {
+        name: "Adobe Photoshop",
+        level: "90%",
+        color: "from-blue-600 to-sky-400",
+        image: "/icon/photoshop.png",
+      },
+      {
+        name: "Adobe XD",
+        level: "85%",
+        color: "from-pink-500 to-rose-400",
+        image: "/icon/xd.png",
+      },
+      {
+        name: "Adobe Premiere Pro",
+        level: "85%",
+        color: "from-indigo-500 to-purple-400",
+        image: "/icon/premier.png",
+      },
+      {
+        name: "CapCut",
+        level: "98%",
+        color: "from-gray-600 to-slate-400",
+        image: "/icon/capcut.png",
+      },
+      {
+        name: "Canva",
+        level: "98%",
+        color: "from-blue-600 to-blue-300",
+        image: "/icon/canva.png",
       },
     ],
   },

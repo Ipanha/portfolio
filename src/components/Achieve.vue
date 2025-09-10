@@ -39,7 +39,7 @@ const acheivement = [
       {
         name: "Basic /Advanced C Programming & Project Courses",
         company: "ETEC Center",
-        image: "/certificate/Mr-Chet-Panha.png",
+        image: "/certificate/CC++.png",
       },
     ],
   },

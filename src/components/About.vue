@@ -60,7 +60,7 @@ const skillsString = computed(() =>
         </div>
 
         <div
-          class="bg-primary rounded-lg p-4 sm:p-6 font-mono shadow-lg"
+          class="bg-primary rounded-lg p-0 sm:p-6 font-mono shadow-lg"
         >
           <pre><code class="language-javascript text-xs sm:text-sm whitespace-pre-wrap">
         <span class="text-gray-500">// {{ developerInfo.name.toLowerCase().replace(' ', '-') }}.js</span>
