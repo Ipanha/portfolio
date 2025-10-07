@@ -39,6 +39,12 @@ const skillCategories = [
         color: "from-blue-500 to-slate-200",
         image: "/icon/jquery.png",
       },
+      {
+        name: "Python",
+        level: "75%",
+        color: "from-blue-500 to-amber-300",
+        image: "/icon/python.png",
+      },
     ],
   },
   {
@@ -150,6 +156,12 @@ const skillCategories = [
   {
     title: "Design & Editing",
     skills: [
+      {
+        name: "Figma",
+        level: "80%",
+        color: "from-orange-600 to-green-400",
+        image: "/icon/figma.png",
+      },
       {
         name: "Adobe Photoshop",
         level: "90%",

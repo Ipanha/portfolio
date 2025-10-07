@@ -91,5 +91,6 @@ const skillsString = computed(() =>
         />
       </div>
     </div>
+    
   </section>
 </template>
