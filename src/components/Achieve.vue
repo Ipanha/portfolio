@@ -46,6 +46,11 @@ const acheivement = [
         company: "ETEC Center",
         image: "/certificate/CC++.png",
       },
+      {
+        name: "Youth ICT Certificate",
+        company: "App E-School Cambodia",
+        image: "/certificate/ESchool.png",
+      },
     ],
   },
 ];
