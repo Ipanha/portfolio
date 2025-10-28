@@ -2,7 +2,6 @@
 import { computed } from "vue";
 import { Award, Briefcase, Code } from "lucide-vue-next";
 
-// Your script content remains the same
 const developerInfo = {
   name: "Chet Panha",
   age: 20,
@@ -27,70 +26,95 @@ const skillsString = computed(() =>
 </script>
 
 <template>
-  <section class="section-container bg-secondary">
-    <div class="text-center mb-12 md:mb-16">
-      <h2 class="section-title">About <span class="accent-text">Me</span></h2>
-      <p class="section-subtitle">Developer & Problem Solver</p>
+  <section class="relative overflow-hidden  py-24 text-text-primary">
+    <!-- Background Glows -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
     </div>
 
-    <div
-      class="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 md:gap-16 items-start"
-    >
-      <div class="animate-fade-in-up space-y-8">
-        <p class="text-base md:text-lg text-text-secondary leading-relaxed">
-          {{ developerInfo.bio }}
+    <!-- Title -->
+    <div class="text-center mb-16 max-w-3xl mx-auto">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+        About <span class="text-accent drop-shadow-lg">Me</span>
+      </h2>
+      <p class="mt-3 text-lg md:text-xl text-text-secondary font-medium italic">
+        {{ developerInfo.motto }}
+      </p>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto px-6">
+      
+      <!-- Image Section -->
+      <div class="relative order-2 lg:order-1 group">
+        <!-- Glowing Border Layer -->
+        <div class="absolute -inset-3 rounded-3xl bg-gradient-to-r from-accent via-purple-500 to-accent opacity-40 blur-xl transition duration-700 group-hover:opacity-80 animate-pulse"></div>
+
+        <!-- Image Card -->
+        <div class="relative overflow-hidden rounded-3xl border border-slate-700 bg-slate-800/50 backdrop-blur-xl shadow-2xl transform transition duration-700 group-hover:scale-[1.02] group-hover:shadow-accent/50">
+          <img
+            src="/images/DSC0031.jpg"
+            alt="Chet Panha"
+            class="w-full h-[22rem] object-cover rounded-3xl transition duration-700 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-slate-900/20 to-transparent"></div>
+        </div>
+
+        <!-- Accent Glow Overlay -->
+        <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-accent/10 to-transparent opacity-0 group-hover:opacity-50 transition duration-700"></div>
+      </div>
+
+      <!-- Text + Stats -->
+      <div class="space-y-10 order-1 lg:order-2 animate-fade-in-up">
+        <p class="text-lg md:text-xl text-text-secondary leading-relaxed border-l-4 border-accent pl-5">
+          Hello, I'm <strong class="text-text-primary font-semibold">{{ developerInfo.name }}</strong>. {{ developerInfo.bio }}
         </p>
 
-        <div class="grid grid-cols-3 gap-2 sm:gap-4">
+        <!-- Stats -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
           <div
             v-for="stat in developerInfo.stats"
             :key="stat.label"
-            class="bg-primary text-center p-3 sm:p-4 rounded-lg"
+            class="bg-slate-800/60 backdrop-blur-md border border-slate-700 hover:border-accent transition duration-300 transform hover:scale-105 text-center p-6 rounded-2xl shadow-xl"
           >
             <component
               :is="stat.icon"
-              class="mx-auto text-accent mb-2"
-              :size="28"
+              class="mx-auto text-accent mb-3 drop-shadow-md"
+              :size="36"
             />
-            <div class="text-lg sm:text-xl font-bold">{{ stat.value }}</div>
-            <div class="text-xs sm:text-sm text-text-secondary">
-              {{ stat.label }}
-            </div>
+            <div class="text-3xl font-extrabold text-accent">{{ stat.value }}</div>
+            <div class="text-sm text-text-primary font-light mt-1">{{ stat.label }}</div>
           </div>
         </div>
 
-        <div
-          class="bg-primary rounded-lg p-0 sm:p-6 font-mono shadow-lg"
-        >
-          <pre><code class="language-javascript text-xs sm:text-sm whitespace-pre-wrap">
-        <span class="text-gray-500">// {{ developerInfo.name.toLowerCase().replace(' ', '-') }}.js</span>
-        <span class="text-purple-400">class</span> <span class="text-green-300">Developer</span> {
-          <span class="text-yellow-300">constructor</span>() {
-            <span class="text-blue-400">this</span>.name      = <span class="text-orange-300">'{{ developerInfo.name }}'</span>;
-            <span class="text-blue-400">this</span>.age        = <span class="text-cyan-300">{{ developerInfo.age }}</span>;
-            <span class="text-blue-400">this</span>.passion   = [<span class="text-orange-300">{{ passionsString }}</span>];
-            <span class="text-blue-400">this</span>.skills    = [<span class="text-orange-300">{{ skillsString }}</span>];
-          }
+        <!-- Code Block -->
+        <div class="bg-slate-900/60 border border-slate-700 rounded-2xl p-6 font-mono shadow-inner backdrop-blur-lg">
+          <div class="flex space-x-2 mb-4">
+            <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+            <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+          </div>
+          <pre class="text-xs sm:text-sm leading-relaxed whitespace-pre-wrap text-slate-300">
+<span class="text-slate-500">// developer-profile.js</span>
+<span class="text-pink-400">class</span> <span class="text-emerald-300">DeveloperProfile</span> {
+  <span class="text-amber-300">constructor</span>() {
+    <span class="text-sky-400">this</span>.name      = <span class="text-orange-300">'{{ developerInfo.name }}'</span>;
+    <span class="text-sky-400">this</span>.major     = <span class="text-orange-300">'{{ developerInfo.major }}'</span>;
+    <span class="text-sky-400">this</span>.location  = <span class="text-orange-300">'Phnom Penh, Cambodia'</span>;
+  }
 
-          <span class="text-yellow-300">getMotto</span>() {
-            <span class="text-purple-400">return</span> <span class="text-orange-300">'{{ developerInfo.motto }}'</span>;
-          }
-        }
-          </code></pre>
+  <span class="text-amber-300">getCoreSkills</span>() {
+    <span class="text-pink-400">return</span> [<span class="text-orange-300">{{ skillsString }}</span>];
+  }
+
+  <span class="text-amber-300">getMotto</span>() {
+    <span class="text-pink-400">console</span>.<span class="text-cyan-300">log</span>(<span class="text-orange-300">'{{ developerInfo.motto }}'</span>);
+  }
+}
+          </pre>
         </div>
       </div>
-
-      <div class="group relative animate-fade-in-up md:sticky md:top-24">
-        <div
-          class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-500"
-        ></div>
-        <img
-          src="/images/withCEO.jpg"
-          alt="Chet Panha"
-          class="relative rounded-xl shadow-2xl w-full h-auto object-cover"
-        />
-      </div>
     </div>
-    
   </section>
 </template>

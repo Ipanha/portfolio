@@ -21,7 +21,7 @@ import {
       class="relative z-10 text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up"
     >
       <img
-        src="/public/images/profile.jpg"
+        src="/public/images/profile.png"
         alt="Chet Panha"
         class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-4 md:mb-6 border-4 border-secondary shadow-lg animate-subtle-glow"
       />
