@@ -17,6 +17,21 @@ const acheivement = [
     title: "Certifications",
     achieves: [
       {
+        name: "Gemini Certified Student",
+        company: "Google",
+        image: "/certificate/gemini.png",
+      },
+      {
+        name: "AWS Academy Graduate - Cloud Foundations",
+        company: "AWS",
+        image: "/certificate/aws_foundation.png",
+      },
+      {
+        name: "Individual Growth Program",
+        company: "CheckinMe",
+        image: "/certificate/Ai.png",
+      },
+      {
         name: "Best Performance of 3rd Quarter 2025",
         company: "CheckinMe",
         image: "/certificate/Specialist-Performance.jpg",
